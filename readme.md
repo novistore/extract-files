@@ -5,6 +5,8 @@
 ![Github issues](https://img.shields.io/github/issues/jaydenseric/extract-files.svg?style=flat-square)
 ![Github stars](https://img.shields.io/github/stars/jaydenseric/extract-files.svg?style=flat-square)
 
+**This is a fork that is used to be able to support [Absinthe](https://github.com/absinthe-graphql/absinthe)'s way of handling file uploads**
+
 Reversibly extracts files from an object tree.
 
 Files are extracted along with their object path to allow reassembly. Extracted files are removed from the tree. Array item files are removed without reindexing the array to simplify reassembly.

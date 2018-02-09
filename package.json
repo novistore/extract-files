@@ -1,19 +1,26 @@
 {
-  "name": "extract-files",
-  "version": "2.0.1",
-  "description": "Reversibly extracts files from an object tree.",
+  "name": "@novistore/extract-files",
+  "version": "3.0.0-alpha.2",
+  "description": "Extracts files from an object tree and reinserts them as a string values.",
   "license": "MIT",
   "author": {
     "name": "Jayden Seric",
     "email": "me@jaydenseric.com",
     "url": "http://jaydenseric.com"
   },
+  "maintainers": [
+    {
+      "name": "Jeroen Visser",
+      "email": "npm@jrnv.nl",
+      "url": "https://jrnv.nl"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaydenseric/extract-files.git"
+    "url": "https://github.com/novistore/extract-files.git"
   },
-  "homepage": "https://github.com/jaydenseric/extract-files#readme",
-  "bugs": "https://github.com/jaydenseric/extract-files/issues",
+  "homepage": "https://github.com/novistore/extract-files#readme",
+  "bugs": "https://github.com/novistore/extract-files/issues",
   "keywords": [
     "extract",
     "file",

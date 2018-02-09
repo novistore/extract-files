@@ -21,7 +21,8 @@ const mock = () => {
     modifiedTree: {
       a: null,
       b: {
-        bb: [undefined, undefined]
+        ba: '1',
+        bb: ['2', '3']
       },
       c: {
         ca: '',
@@ -61,14 +62,17 @@ test('extractFiles extracts files from an object tree', t => {
     [
       {
         path: 'b.ba',
+        index: 1,
         file
       },
       {
         path: 'b.bb.0',
+        index: 2,
         file
       },
       {
         path: 'b.bb.1',
+        index: 3,
         file
       }
     ],
@@ -91,14 +95,17 @@ test('extractFiles with a tree path extracts files from an object tree', t => {
     [
       {
         path: 'treepath.b.ba',
+        index: 1,
         file
       },
       {
         path: 'treepath.b.bb.0',
+        index: 2,
         file
       },
       {
         path: 'treepath.b.bb.1',
+        index: 3,
         file
       }
     ],

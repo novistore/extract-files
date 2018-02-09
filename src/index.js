@@ -10,6 +10,7 @@ export const isObject = node => typeof node === 'object' && node !== null
  * @typedef {Object} ExtractedFile
  * @property {String} path - Original location in the object tree.
  * @property {String} file - The actual file.
+ * @property {String} index - The file's number.
  */
 
 /**
@@ -20,6 +21,7 @@ export const isObject = node => typeof node === 'object' && node !== null
  */
 export function extractFiles(tree, treePath = '') {
   const files = []
+  let index = 1
   const recurse = (node, nodePath) => {
     // Iterate enumerable properties of the node
     Object.keys(node).forEach(key => {
@@ -35,11 +37,11 @@ export function extractFiles(tree, treePath = '') {
         node[key] instanceof ReactNativeFile
       ) {
         // Extract the file and it's object tree path
-        files.push({ path, file: node[key] })
+        files.push({ path, file: node[key], index })
 
-        // Delete the file. Array items must be deleted without reindexing to
-        // allow repopulation in a reverse operation.
-        delete node[key]
+        // Set the value to the index of the file, incrementing the index for
+        // the next file
+        node[key] = (index++).toString()
 
         // No further checks or recursion
         return

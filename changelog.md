@@ -1,5 +1,8 @@
 # extract-files change log
 
+## 3.0.0
+- Change package to work with Absinthe's upload handling
+
 ## 2.0.1
 
 - Updated dependencies.
